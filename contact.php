@@ -11,12 +11,12 @@
 				</div>
 
 				<p>Have any any suggestions, complaints, or feedbacks? Do not hesitate to contact us!. You can also rate this website and our services. We welcome our visitors to personally contact and rate us so that we can improve our services in the future.</p>
-				<p>You can contact us by sending us a message using the form below, or you can also reach us through our Facebook and Twitter page.</p>
+				<p>You can contact us by sending us a message using the form below, or you can also reach us through our Facebook page.</p>
 				 <div class="socials-link-contact">
 				 	
-					  <a href="http://www.facebook.com/afzafri" title="Find us on Facebook" target="_blank" class="socials-link-fb-contact">Facebook <i class="fa fa-facebook-square" alt="Find us on Facebook"></i><span class="sr-only">Facebook&gt;/span&gt;</span></a> 
+					  <a href="http://www.facebook.com/OfficialIPB" title="Find us on Facebook" target="_blank" class="socials-link-fb-contact">Facebook <i class="fa fa-facebook-square" alt="Find us on Facebook"></i><span class="sr-only">Facebook&gt;/span&gt;</span></a> 
 					  &nbsp;&nbsp;
-				      <a href="https://twitter.com/afzafri" title="Follow us on Twitter" target="_blank" class="socials-link-twitter-contact">Twitter <i class="fa fa-twitter-square" alt="Follow us on Twitter"></i><span class="sr-only">Twitter</span></a>
+                     
 			      </div>
 				<br><br>
 				<center>

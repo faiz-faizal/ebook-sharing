@@ -48,15 +48,13 @@
     </div>
     <div class="collapse navbar-collapse" style="float: right">
       <ul class="nav navbar-nav">
-		<li class="active"><a href="./index.php">Home</a></li>
+		<li class="active"><a href="./homepage.php">Home</a></li>
 		<li class="active"><a href="./about.php">About Us</a></li>
 		<li class="active"><a href="./search.php">Search Books</a></li>
-		<li class="active"><a href="./membership.php">Membership</a></li> 
 		<li class="active"><a href="./contact.php">Contact Us</a></li>
         <li style="float: right">
             <div style="margin-top:7px" class="btn-group">
-            <a class="btn btn-primary" href="./admin/"><b><i><span style="font-weight: normal; ">Admin Login</span></i></b></a>
-            <a class="btn btn-success"><b><i><span style="font-weight: normal;">User Login</span></i></b></a>
+            <a class="btn btn-primary" href="./index.php"><b><i><span style="font-weight: normal; ">Log Out</span></i></b></a>
             </div>
           </li>
         </ul>

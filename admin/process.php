@@ -45,7 +45,11 @@ if( $_POST['option'] == "add" )
 		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 		
-
+        // Check file size
+		if ($_FILES["bookUpload"]["size"] > 100000000) {
+			//echo "Sorry, your file is too large.";
+			$uploadOk = 0;
+		}
 		// Allow certain file formats
 		if($imageFileType != "pdf") {
 			//echo "Sorry, only JPG file are allowed.";
@@ -89,7 +93,7 @@ if( $_POST['option'] == "add" )
 			}
 
 		// Check file size
-		if ($_FILES["coverUpload"]["size"] > 500000) {
+		if ($_FILES["coverUpload"]["size"] > 100000000) {
 			//echo "Sorry, your file is too large.";
 			$uploadOk = 0;
 		}

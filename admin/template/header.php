@@ -145,11 +145,6 @@
                 <i class="fa fa-fw fa-list-alt"></i> <span>Manage Upcoming Books</span>
               </a>
             </li>
-            <li class="active">
-              <a href="./membership.php">
-                <i class="fa fa-fw fa-group"></i> <span>Manage Memberships</span>
-              </a>
-            </li>
        <li><br><br><hr>
         <div class="user-panel-logo">
           <div class="pull-left image">

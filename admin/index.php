@@ -82,7 +82,7 @@ if(isset($_POST['login']))
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			
 			//sql query
-			$stmt = $conn->prepare("SELECT USR_ID, USR_USERN, USR_PASS, USR_FNAME FROM USERS");
+			$stmt = $conn->prepare("SELECT ADMIN_ID, ADMIN_USERN, ADMIN_PASS, ADMIN_FNAME FROM ADMIN");
 
 			//execute query
 			$stmt->execute();
@@ -91,10 +91,10 @@ if(isset($_POST['login']))
 			while($result = $stmt->fetch(PDO::FETCH_ASSOC))
 			{
 				//store fetched data into variable
-				$i = $result['USR_ID'];
-				$u = $result['USR_USERN'];
-				$p = $result['USR_PASS'];
-				$f = $result['USR_FNAME'];
+				$i = $result['ADMIN_ID'];
+				$u = $result['ADMIN_USERN'];
+				$p = $result['ADMIN_PASS'];
+				$f = $result['ADMIN_FNAME'];
 				
 				//check if credentials from login form
 				//match in the database. if match, set sessions, go to dashboard.

@@ -16,18 +16,19 @@ catch(PDOException $e)
 //-----------------------------USER PROCESSES-------------------------------------------------------------------------------
 
 //membership form - CODE HASSAN
-if($_POST['option'] == "register")
+if($_POST['option'] == "submit")
 {
 	try
 	{
-		$fnamem = $_POST['name'];
-		$dateBirth = $_POST["dob"];
-		$ic = $_POST["ic"];
-		$email = $_POST["email"];
-		$phone = $_POST["phone"];
+        
+		$matric = $_POST['user_matricid'];
+		$username = $_POST['user_username'];
+		$fname = $_POST['user_fullname'];
+		$email = $_POST['user_email'];
+		$password = $_POST['user_pwd'];
 		
-		$stmt = $conn->prepare("INSERT INTO MEMBERSHIP (M_FNAME,M_DOB,M_IC,M_EMAIL,M_PHONE) VALUES(?,?,?,?,?)");
-		$stmt->execute(array($fnamem,$dateBirth,$ic,$email,$phone));
+		$stmt = $conn->prepare("INSERT INTO USERS (USER_ID,USER_USERN,USER_FNAME,USER_EMAIL,USER_PASS) VALUES(?,?,?,?,?)");
+		$stmt->execute(array($matric,$username,$fname,$email,$password));
 		echo "Success! Thank You.";
 		
 	}catch(PDOException $e)
