@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2017 at 03:47 PM
+-- Generation Time: Dec 12, 2017 at 12:06 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -51,7 +51,7 @@ INSERT INTO `admin` (`ADMIN_ID`, `ADMIN_USERN`, `ADMIN_PASS`, `ADMIN_FNAME`, `AD
 --
 
 CREATE TABLE `books` (
-  `BK_ID` int(11) NOT NULL,
+  `BK_ID` varchar(100) NOT NULL,
   `BK_TITLE` varchar(200) NOT NULL,
   `BK_AUTHOR` varchar(200) NOT NULL,
   `BK_GENRE` int(11) NOT NULL,
@@ -59,22 +59,16 @@ CREATE TABLE `books` (
   `BK_PUBLISH` varchar(200) NOT NULL,
   `BK_LANG` int(11) NOT NULL,
   `BK_PAGES` int(11) NOT NULL,
-  `BK_SYN` text NOT NULL
+  `BK_SYN` text NOT NULL,
+  `BK_EXT` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `ebooks`
+-- Dumping data for table `books`
 --
 
-CREATE TABLE `ebooks` (
-  `EBK_ID` int(11) NOT NULL,
-  `EBK_TITLE` varchar(200) NOT NULL,
-  `EBK_AUTHOR` varchar(200) NOT NULL,
-  `EBK_GEN` int(11) NOT NULL,
-  `EBK_SYN` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `books` (`BK_ID`, `BK_TITLE`, `BK_AUTHOR`, `BK_GENRE`, `BK_SERIES`, `BK_PUBLISH`, `BK_LANG`, `BK_PAGES`, `BK_SYN`, `BK_EXT`) VALUES
+('asdfjaslkdfjasl', 'naslfjklsda', 'SJALKDJ', 2, 'LKJslKCz', 'zXcjzlj', 1, 21321, '				   ljslkjaslkjl\r\n				', 'pdf');
 
 -- --------------------------------------------------------
 
@@ -175,7 +169,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`USER_ID`, `USER_FNAME`, `USER_EMAIL`, `USER_PASS`, `USER_USERN`) VALUES
 ('2015411572', 'Muhammad Faiz', 'poulsmith96@gmail.com', '123', 'admin'),
+('20154115727', 'Muhammad Faiz Bin Mohd Faizal', 'poulsmith96@gmail.com', 'fareast12321', 'Muhd97'),
 ('2015411573', 'Muhammad ', 'mfaiz.mfm@gmail.com', '12321', 'Faiz'),
+('2015411574', 'Muhamamd', 'faiz123@gmail.com', '12321', 'faiz123'),
 ('asdfasdfd', 'asdfsafa', 'faiz123@asas', 'admin123', 'asdfas'),
 ('Faiz', 'asfas', 'faiz123@asdfasdf', 'admin123', 'asfas');
 
@@ -194,12 +190,6 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `books`
   ADD PRIMARY KEY (`BK_ID`);
-
---
--- Indexes for table `ebooks`
---
-ALTER TABLE `ebooks`
-  ADD PRIMARY KEY (`EBK_ID`);
 
 --
 -- Indexes for table `genres`
@@ -246,16 +236,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `admin`
   MODIFY `ADMIN_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `books`
---
-ALTER TABLE `books`
-  MODIFY `BK_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `ebooks`
---
-ALTER TABLE `ebooks`
-  MODIFY `EBK_ID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `genres`
 --

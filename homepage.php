@@ -134,15 +134,6 @@
 				</div>
 		 </div>
    </div>
-
-   <div class="sidebar col-md-3 hidden-sm hidden-xs">
-         <div class="panel panel-info">
-			<div class="panel-heading">Apply Membership Now!</div>
-					
-					<a href="./membership.php"><img src="./images/membership_banner.gif" width="100%" title="Become a member now!"/></a>
-					
-		 </div>
-   </div>
    <!-- end side bar right -->
 
 </div> <!-- end wrapper -->

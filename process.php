@@ -15,27 +15,6 @@ catch(PDOException $e)
 
 //-----------------------------USER PROCESSES-------------------------------------------------------------------------------
 
-//membership form - CODE HASSAN
-if($_POST['option'] == "submit")
-{
-	try
-	{
-        
-		$matric = $_POST['user_matricid'];
-		$username = $_POST['user_username'];
-		$fname = $_POST['user_fullname'];
-		$email = $_POST['user_email'];
-		$password = $_POST['user_pwd'];
-		
-		$stmt = $conn->prepare("INSERT INTO USERS (USER_ID,USER_USERN,USER_FNAME,USER_EMAIL,USER_PASS) VALUES(?,?,?,?,?)");
-		$stmt->execute(array($matric,$username,$fname,$email,$password));
-		echo "Success! Thank You.";
-		
-	}catch(PDOException $e)
-	{
-		echo "Connection Error : " . $e->getMessage();
-	}
-}
 
 //contact form
 if($_POST['option'] == "contactus")
@@ -465,9 +444,10 @@ if( $_POST['option'] == "listEbooksHomepage" )
 					$BK_ID = $result['BK_ID'];
 					$BK_TITLE = $result['BK_TITLE'];
 					$BK_AUTHOR = $result['BK_AUTHOR'];
+                    $BK_EXT = $result['BK_EXT'];
 					$BK_GENRE= $result['GEN_NAME'];
 					$BK_LANGUAGE = $result['LANG_NAME'];
-
+                    
 					echo "
 									  <tr>
 									  ";
@@ -487,11 +467,11 @@ if( $_POST['option'] == "listEbooksHomepage" )
 										<td>$BK_LANGUAGE</td>
 										<td align='left'>
                                         <div class='btn-group-horizontal'>
-                                            <button id='modals' data-toggle='modal' data-target='#book' class='btn btn-default' value='$BK_ID' data-balloon='View Book Details' data-balloon-pos='up' style='color:white; background-color:#FFC107'>details</button>
+                                            <button id='modals' data-toggle='modal' data-target='#book' class='btn btn-default' value='$BK_ID' data-balloon='View Book Details' data-balloon-pos='up' style='color:white; background-color:#FFC107'>Details</button>
                                         
-                                            <a data-balloon='View Book Details' data-balloon-pos='up' href='./ebooks/$BK_ID.pdf' class='btn btn-primary' target='_blank'>Read</a>
+                                            <a data-balloon='View / Read Book' data-balloon-pos='up' href='./ebooks/$BK_ID.$BK_EXT' class='btn btn-primary' target='_blank'>Read</a>
 
-                                            <a data-balloon='View Book Details' data-balloon-pos='up' href='./ebooks/$BK_ID.pdf' class='btn btn-success' download>Download</a>
+                                            <a data-balloon='Download Book' data-balloon-pos='up' href='./ebooks/$BK_ID.$BK_EXT' class='btn btn-success' download>Download</a>
                                         </div>
                                         
                                         </td>

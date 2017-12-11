@@ -23,6 +23,7 @@ if( $_POST['option'] == "add" )
 {
 	try
 	{
+        $bkid = $_POST['bid'];
 		$btitle = $_POST['btitle'];
 		$bauthor = $_POST['bauthor'];
 		$bgenre = $_POST['bgenre'];
@@ -32,47 +33,37 @@ if( $_POST['option'] == "add" )
 		$bpages = $_POST['bpages'];
 		$bsyn = $_POST['bsyn'];
 		$bsyn = str_replace("'","''",$bsyn);
+        $bext = pathinfo("../ebooks/" . basename($_FILES["bookUpload"]["name"]),PATHINFO_EXTENSION);
 
 		
-		$stmt = $conn->prepare("INSERT INTO BOOKS (BK_TITLE,BK_AUTHOR,BK_GENRE,BK_SERIES,BK_PUBLISH,BK_LANG,BK_PAGES,BK_SYN) VALUES(?,?,?,?,?,?,?,?) ");
-		$stmt->execute(array($btitle,$bauthor,$bgenre,$bseries,$bpublish,$blang,$bpages,$bsyn));
-		$bkid = $conn->lastInsertId();
+		$stmt = $conn->prepare("INSERT INTO BOOKS (BK_ID,BK_TITLE,BK_AUTHOR,BK_GENRE,BK_SERIES,BK_PUBLISH,BK_LANG,BK_PAGES,BK_SYN,BK_EXT) VALUES(?,?,?,?,?,?,?,?,?,?) ");
+		$stmt->execute(array($bkid,$btitle,$bauthor,$bgenre,$bseries,$bpublish,$blang,$bpages,$bsyn,$bext));
+		//$bkid = $conn->lastInsertId();
 
         //upload FILE
 		$target_dir = "../ebooks/";
 		$target_file = $target_dir . basename($_FILES["bookUpload"]["name"]);
+        $target_loc = $_FILES["bookUpload"]["name"];
 
 		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-		
-        // Check file size
-		if ($_FILES["bookUpload"]["size"] > 100000000) {
-			//echo "Sorry, your file is too large.";
-			$uploadOk = 0;
-		}
-		// Allow certain file formats
-		if($imageFileType != "pdf") {
-			//echo "Sorry, only JPG file are allowed.";
-			$uploadOk = 0;
-		}
 		
 		$imgstat = 0;
 		
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
 			echo "<script>alertify.error('PDF not uploaded.')</script>";
-		// if everything is ok, try to upload file
+		// if everything is ok, try to upload file4rG
 		} 
-        
         else {
-			if (move_uploaded_file($_FILES["bookUpload"]["tmp_name"], $target_dir . $bkid . "." . $imageFileType)) {
+			if (move_uploaded_file($_FILES["bookUpload"]["tmp_name"], $target_dir . $bkid .".".$imageFileType)) {
 				echo "<script>alertify.success('The PDF has been uploaded.')</script>";
 				$imgstat = 1;
 			} 
             else {
 				echo "<script>alertify.error('Sorry, there was an error uploading your file.')</script>";
 			}
-		}
+		}  //UPLOAD FILE
         
         
         //upload COVER

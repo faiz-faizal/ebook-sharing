@@ -51,9 +51,9 @@
         <!-- Logo -->
         <a href="./home.php" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>EL</b>I</span>
+          <span class="logo-mini">E-BSI</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>E-Library </b>Info</span>
+          <span class="logo-lg">E-book Sharing <b>IPB</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
