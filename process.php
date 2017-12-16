@@ -636,7 +636,7 @@ if( $_POST['option'] == "listEbooksHomepage" )
 		try
 		{
 			//----HISTORY BOOK----
-			if($_POST['bookgenre'] == "history")
+			if($_POST['bookgenre'] == "education")
 			{
 				$stmtHist = $conn->prepare("
 							SELECT *
@@ -708,7 +708,7 @@ if( $_POST['option'] == "listEbooksHomepage" )
 			}
 
 			//-----Mystery Suspense Books-----
-			if($_POST['bookgenre'] == "mystery")
+			if($_POST['bookgenre'] == "novel")
 			{
 				$stmtHist = $conn->prepare("
 							SELECT *
@@ -744,7 +744,7 @@ if( $_POST['option'] == "listEbooksHomepage" )
 			}
 
 			//-----Romance Books-----
-			if($_POST['bookgenre'] == "romance")
+			if($_POST['bookgenre'] == "others")
 			{
 				$stmtHist = $conn->prepare("
 							SELECT *

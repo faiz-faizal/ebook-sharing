@@ -906,7 +906,7 @@ if( $_POST['option'] == "statistics" )
 									( SELECT COUNT(*)
 									 FROM BOOKS 
 									 WHERE BK_GENRE = '1' 
-									) AS HISTORY, 
+									) AS EDUCATION, 
 									( SELECT COUNT(*)
 									 FROM BOOKS 
 									 WHERE BK_GENRE = '2' 
@@ -914,63 +914,21 @@ if( $_POST['option'] == "statistics" )
 									( SELECT COUNT(*)
 									 FROM BOOKS 
 									 WHERE BK_GENRE = '3' 
-									) AS MYSTERY,
+									) AS NOVEL,
 									( SELECT COUNT(*)
 									 FROM BOOKS 
 									 WHERE BK_GENRE = '4' 
-									) AS ROMANCE");
+									) AS OTHERS");
 		$totalH->execute();
 		
 		$resultB = $totalH->fetch(PDO::FETCH_ASSOC);
 
-		$totalHistory = $resultB['HISTORY'];
+		$totalEducation = $resultB['EDUCATION'];
 		$totalScifi = $resultB['SCIFI'];
-		$totalMystery = $resultB['MYSTERY'];
-		$totalRomance = $resultB['ROMANCE'];
+		$totalNovel = $resultB['NOVEL'];
+		$totalOthers = $resultB['OTHERS'];
 		
-		echo $totalitems.",".$totalHistory.",".$totalScifi.",".$totalMystery.",".$totalRomance.",";
-
-		//total ratings
-		$totalRat = $conn->prepare("SELECT COUNT(*) AS COUNTRAT FROM RATINGS");
-		$totalRat->execute();
-		
-		$resultRat = $totalRat->fetch(PDO::FETCH_ASSOC);
-		$totalratings = $resultRat['COUNTRAT'];
-
-		//total ratings each
-		$totalR = $conn->prepare("SELECT 
-									( SELECT COUNT(*)
-									 FROM RATINGS 
-									 WHERE RAT_STARS = '1' 
-									) AS STAR1,
-									( SELECT COUNT(*)
-									 FROM RATINGS 
-									 WHERE RAT_STARS = '2' 
-									) AS STAR2,
-									( SELECT COUNT(*)
-									 FROM RATINGS 
-									 WHERE RAT_STARS = '3' 
-									) AS STAR3,
-									( SELECT COUNT(*)
-									 FROM RATINGS 
-									 WHERE RAT_STARS = '4' 
-									) AS STAR4,
-									( SELECT COUNT(*)
-									 FROM RATINGS 
-									 WHERE RAT_STARS = '5' 
-									) AS STAR5
-									");
-		$totalR->execute();
-		
-		$resultR = $totalR->fetch(PDO::FETCH_ASSOC);
-
-		$star1 = $resultR['STAR1'];
-		$star2 = $resultR['STAR2'];
-		$star3 = $resultR['STAR3'];
-		$star4 = $resultR['STAR4'];
-		$star5 = $resultR['STAR5'];
-
-		echo $totalratings.",".$star1.",".$star2.",".$star3.",".$star4.",".$star5.",";
+		echo $totalitems.",".$totalEducation.",".$totalScifi.",".$totalNovel.",".$totalOthers.",";
 
 	}
 	catch(PDOException $e)

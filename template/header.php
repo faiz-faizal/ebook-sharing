@@ -54,7 +54,7 @@
 		<li class="active"><a href="./contact.php">Contact Us</a></li>
         <li style="float: right">
             <div style="margin-top:7px" class="btn-group">
-            <a class="btn btn-primary" href="./index.php"><b><i><span style="font-weight: normal; ">Log Out</span></i></b></a>
+            <a class="btn btn-primary" href="./log_out_session.php"><b><i><span style="font-weight: normal; ">Log Out</span></i></b></a>
             </div>
           </li>
         </ul>

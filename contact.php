@@ -37,30 +37,6 @@
 	                     	 <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required="required">
 	                      </div>
 	                    </div>
-	                    <div class="form-group" id="typeMessageIn">
-	                      <label class="col-sm-2 control-label">Message Type</label>
-	                      <div class="col-sm-10">
-	                     	 Suggestion: <input type="radio" id="typeMessage" name="typeMessage" value="Suggestion" checked> &nbsp;
-	                     	 Complaint: <input type="radio" id="typeMessage" name="typeMessage" value="Complaint"> &nbsp;
-	                     	 Feedback: <input type="radio" id="typeMessage" name="typeMessage" value="Feedback"> &nbsp;
-	                      </div>
-	                    </div>
-
-	                    <div class="form-group" id="typeMessageIn">
-	                      <label class="col-sm-2 control-label">Rate</label>
-	                      	<div class="stars">
-		                    	<input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
-							    <label class="star star-5" for="star-5"></label>
-							    <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
-							    <label class="star star-4" for="star-4"></label>
-							    <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
-							    <label class="star star-3" for="star-3"></label>
-							    <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
-							    <label class="star star-2" for="star-2"></label>
-							    <input class="star star-1" id="star-1" type="radio" name="star" value="1"/ checked>
-							    <label class="star star-1" for="star-1"></label>
-							</div>	
-	                    </div>
 
 	                    <div class="form-group" id="messageIn">
 	                      <label class="col-sm-2 control-label">Message</label>

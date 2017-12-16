@@ -146,10 +146,13 @@
               </a>
             </li>
        <li><br><br><hr>
-        <div class="user-panel-logo">
+        
+		<!--<div class="user-panel-logo">
           <div class="pull-left image">
             <img src="../images/logo.png"  alt="Logo">
           </div>
+		  -->
+		  
         </div>
       </li>
           </ul>

@@ -617,10 +617,10 @@ $(document).ready(function(){
 						type: 'pie',
 						data: {
 							labels: [
-								"History",
+								"Education",
 								"Sci-Fi & Fantasy",
-								"Mystery & Suspense",
-								"Romance"
+								"Novel",
+								"Others"
 							],
 							datasets: [
 								{

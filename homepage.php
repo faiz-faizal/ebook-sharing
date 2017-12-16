@@ -60,10 +60,10 @@
 	<div class="panel panel-warning">
 		<div class="panel-heading">Newest Books</div>
 			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="pill" href="#menu1">History</a></li>
+				<li class="active"><a data-toggle="pill" href="#menu1">Education</a></li>
 				<li><a data-toggle="pill" href="#menu2">Sci-Fi &amp; Fantasy</a></li>
-				<li><a data-toggle="pill" href="#menu3">Mystery &amp; Suspense</a></li>
-				<li><a data-toggle="pill" href="#menu4">Romance</a></li>
+				<li><a data-toggle="pill" href="#menu3">Novel</a></li>
+				<li><a data-toggle="pill" href="#menu4">Other</a></li>
 		  </ul>
 		  
 		 <div class="panel-body">
