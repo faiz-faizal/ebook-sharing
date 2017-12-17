@@ -59,7 +59,7 @@ unset($_SESSION['SESS_MEMBER_NAME']);
 			<div class="box-footer">
 				<input type="submit" class="btn btn-success pull-right" value="Log In" name="login">
 				</form>
-				<a href="../index.php" class="btn btn-default">Home</a>
+				<a href="../index.php" class="btn btn-default">User Login</a>
 			</div><!-- /.box-footer -->
 
 

@@ -546,60 +546,24 @@ $(document).ready(function(){
 
 
 	//-----------------END LIST ALL BOOK MANAGE---------------
+	
+//-----------------START LIST ALL USERS MANAGE-----------
 
-
-	//-------------------------------Manage Membership-----------------------------------
-	//search member
+//append homepage
 	$(function(){
-		if($('#membershipadminpage').length > 0){
-			$.post('./process.php','option=searchMember',function(data){
-				$('#searchMemberSelect').append(data);
-				$('.selectpicker').selectpicker('refresh');
-				
-			});
+		if($('#manageUser').length > 0) {
+			$('.overlay').show();
+			$('.sk-circle').show();
+			var numpage = $('#curpage').val();
+			
+			listall(numpage);
+			
+			$('.overlay').hide();
+			$('.sk-circle').hide();
+			
 		}
 	});
-	
-	
-	//append member box to update
-	$('#showBox').click(function(){
-		event.preventDefault();
-		var ics = $('#searchMemberSelect').val();
-		$("#dis").empty();
-		if(ics == '')
-		{
-			alertify.alert("Please choose member's name before search.");
-		}
-		else
-		{
-			$.post('./process.php','option=updateMember&ic='+ics,function(data){
-				$("#dis").append(data).hide().fadeIn('slow');
-				alertify.success("Data loaded.");
-			});
-		}
-		
-	});
-
-	//update membership
-	$(document).on("click","#upmember",function(){
-		event.preventDefault();
-
-		alertify.confirm("Update data?",function(){
-			var ics = $('#ic').val();
-			$.post('./process.php',$('#memberUpdate').serialize()+'&option=updateMember2',function(data){
-				alertify.success(data);
-				
-				$("#dis").empty();
-				$.post('./process.php','option=updateMember&ic='+ics,function(data){
-					$("#dis").append(data).hide().fadeIn('slow');
-					alertify.success("Data loaded.");
-				});
-				
-			});
-		});
-		
-	});
-	
+//-----------------END LIST ALL USERS MANAGE-----------
 	
 	//---------START STATISTICS----------------
 	

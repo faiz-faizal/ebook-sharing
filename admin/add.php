@@ -103,9 +103,10 @@
 						<div class="col-sm-8">
 							<input type="file" name="coverUpload" id="coverUpload" class="form-control">
 							<p>Note: only <b>.jpg</b> photo are allowed.</p>
-							<br><label>Preview : </label>
+							<!--<br><label>Preview : </label>
 							<br>
 							<img id="image_upload_preview" src="../images/bookscover/book_temp.png" alt="your image" height="200px"/>
+							-->
 						</div>
 					</div>	
 					

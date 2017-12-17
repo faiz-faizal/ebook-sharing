@@ -22,24 +22,26 @@
 				<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
 				<div style="position:absolute;display:block;background:url('./images/banner/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
 			</div>
+			
+			<!--CAROUSELL SLIDEER-->
 			<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 720px; height: 300px; overflow: hidden;">
 				<div data-p="112.50" style="display: none;">
-					<img data-u="image" src="./images/banner/artofwar.jpg" />
+					<img data-u="image" src="./images/banner/thetimemachine.jpg" />
 				</div>
 				<div data-p="112.50" style="display: none;">
-					<img data-u="image" src="./images/banner/wrightbrother.jpg" />
+					<img data-u="image" src="./images/banner/hungergames.jpg" />
 				</div>
 				<div data-p="112.50" style="display: none;">
-					<img data-u="image" src="./images/banner/TopFour.png" />
+					<img data-u="image" src="./images/banner/soduku.jpg" />
 				</div>
 				<div data-p="112.50" style="display: none;">
-					<img data-u="image" src="./images/banner/divergenttrilogy.jpg" />
+					<img data-u="image" src="./images/banner/donaldduck.jpg" />
 				</div>
 				<div data-p="112.50" style="display: none;">
-					<img data-u="image" src="./images/banner/allegiant.jpg" />
+					<img data-u="image" src="./images/banner/sebesta.jpg" />
 				</div>
 				<div data-p="112.50" style="display: none;">
-					<img data-u="image" src="./images/banner/5thwave.jpg" />
+					<img data-u="image" src="./images/banner/neverlonelyagain.jpg" />
 				</div>
 				<a data-u="add" href="http://www.jssor.com" style="display:none">Jssor Slider</a>
 			
@@ -73,7 +75,7 @@
 				<!-- list newest History Books -->
 				<div id="menu1" class="tab-pane fade in active">
 					<div class="row">
-							<div id="listNewestHistory"></div>
+							<div id="listNewestEducation"></div>
 						</div>
 				</div>
 
@@ -86,13 +88,13 @@
 				
 				<div id="menu3" class="tab-pane fade">
 					<div class="row">
-							<div id="listNewestMystery"></div>
+							<div id="listNewestNovel"></div>
 						</div>
 				</div>
 				
 				<div id="menu4" class="tab-pane fade">
 					<div class="row">
-							<div id="listNewestRomance"></div>
+							<div id="listNewestOthers"></div>
 						</div>
 				</div>
 				

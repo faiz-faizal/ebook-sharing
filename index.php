@@ -46,7 +46,7 @@ unset($_SESSION['SESS_MEMBER_NAME']);
 		
         <form action="index.php" method="post">
           <div class="form-group has-feedback">
-				<input type="text" class="form-control" id="userLogin" name="user" placeholder="Username" required="required" autofocus>
+				<input type="text" class="form-control" id="userLogin" name="user" placeholder="Username/Matric ID" required="required" autofocus>
 				<span class="glyphicon glyphicon-user form-control-feedback"></span>
 				<div id="errUser"></div>
           </div>

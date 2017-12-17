@@ -231,14 +231,14 @@ $(document).ready(function(){
   //------START SHOW NEWEST BOOK HOMEPAGE-----
    $(function(){
     if($('#homepage').length > 0) {
-      $('#listNewestHistory').empty();
+      $('#listNewestEducation').empty();
       $('#listNewestSciFi').empty();
-      $('#listNewestMystery').empty();
-      $('#listNewestRomance').empty();
+      $('#listNewestNovel').empty();
+      $('#listNewestOthers').empty();
 
-      //history
-      $.post('./process.php','option=listnewestbook&bookgenre=history',function(data){
-        $('#listNewestHistory').append(data).hide().fadeIn("slow");
+      //education
+      $.post('./process.php','option=listnewestbook&bookgenre=education',function(data){
+        $('#listNewestEducation').append(data).hide().fadeIn("slow");
       });
 
       //scifi
@@ -246,14 +246,14 @@ $(document).ready(function(){
         $('#listNewestSciFi').append(data).hide().fadeIn("slow");
       });
 
-      //mystery
-      $.post('./process.php','option=listnewestbook&bookgenre=mystery',function(data){
-        $('#listNewestMystery').append(data).hide().fadeIn("slow");
+      //novel
+      $.post('./process.php','option=listnewestbook&bookgenre=novel',function(data){
+        $('#listNewestNovel').append(data).hide().fadeIn("slow");
       });
 
-      //romance
-      $.post('./process.php','option=listnewestbook&bookgenre=romance',function(data){
-        $('#listNewestRomance').append(data).hide().fadeIn("slow");
+      //others
+      $.post('./process.php','option=listnewestbook&bookgenre=others',function(data){
+        $('#listNewestOthers').append(data).hide().fadeIn("slow");
       });
 
     }

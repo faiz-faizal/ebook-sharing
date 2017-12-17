@@ -24,7 +24,7 @@
 				<div class="boxForm">
 					<span style="font-size:30px"><b>Message Form</b></span><hr>
 	                <!-- form start -->
-	                <form role="form" class="form-horizontal" id="contactUsForm" action="./contact.php" method="post">
+	                <form role="form" class="form-horizontal" id="contactUsForm" action="send_feedback.php" method="post">
 	                    <div class="form-group" id="nameIn">
 	                      <label class="col-sm-2 control-label">Full Name</label>
 	                      <div class="col-sm-10">
@@ -45,7 +45,7 @@
 	                      </div>
 	                    </div>
 	                    <input type="text" name="option" value="contactus" style="display:none;">
-	                    <button id="contactUsSubmit" class="btn btn-success pull-right" name="contactMsg" value="1">Send</button>
+						<input type="submit" name="contactMsg" value="Send">
 	                </form>  
 	            </div></div>
 	            </center>

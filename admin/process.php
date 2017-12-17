@@ -82,12 +82,7 @@ if( $_POST['option'] == "add" )
 				//echo "File is not an image.";
 				$uploadOk = 0;
 			}
-
-		// Check file size
-		if ($_FILES["coverUpload"]["size"] > 100000000) {
-			//echo "Sorry, your file is too large.";
-			$uploadOk = 0;
-		}
+			
 		// Allow certain file formats
 		if($imageFileType != "jpg") {
 			//echo "Sorry, only JPG file are allowed.";
@@ -545,7 +540,7 @@ if($_POST['option'] == "showUpdateForm")
 		<div class='form-group'>
           <label class='col-sm-3 control-label'>ID:</label>
 			<div class='col-sm-8'>
-				<input type='text' class='form-control' name='bk_id' id='bk_id' placeholder='Book ID' value='{$bk_id}' disabled='disabled' readonly='readonly'>
+				<input type='text' class='form-control' name='bk_id' id='bk_id' placeholder='Book ID' value='{$bk_id}'> <!--disabled='disabled' readonly='readonly'>-->
 			</div>
 		</div>
 	  
@@ -719,11 +714,6 @@ if($_POST['option'] == "updatedataModal")
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 		// Check if image file is a actual image or fake image
 
-		// Check file size
-		if ($_FILES["coverUpload"]["size"] > 500000) {
-			//echo "Sorry, your file is too large.";
-			$uploadOk = 0;
-		}
 		// Allow certain file formats
 		if($imageFileType != "jpg") {
 			//echo "Sorry, only JPG file are allowed.";

@@ -71,13 +71,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="../images/logo.png" class="user-image" alt="User Image">
+                  <img src="../images/admin_icon.png" class="user-image" alt="User Image">
                   <span class="hidden-xs">Administrator Page</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="../images/logo.png" alt="User Image">
+                    <img src="../images/admin_icon.png" alt="User Image">
            <p>
                       Time : <?php date_default_timezone_set("Asia/Kuala_Lumpur"); echo date("h:i:s a"); ?><br>
             Date : <?php echo date("d-m-Y"); ?><br>
@@ -111,7 +111,7 @@
               }
               else
               {
-                echo "<img src='../images/users/noimage.jpg' class='img-circle' alt='User Image'>"; 
+                echo "<img src='../images/users/admin_icon.png' class='img-circle' alt='User Image'>"; 
               }
 
               ?>
@@ -145,13 +145,18 @@
                 <i class="fa fa-fw fa-list-alt"></i> <span>Manage Upcoming Books</span>
               </a>
             </li>
+			<li class="active">
+              <a href="./view_feedback.php">
+                <i class="fa fa-fw fa-list-alt"></i> <span>Manage Feedback</span>
+              </a>
+            </li>
        <li><br><br><hr>
         
-		<!--<div class="user-panel-logo">
+		<div class="user-panel-logo">
           <div class="pull-left image">
-            <img src="../images/logo.png"  alt="Logo">
+            <img src=""  alt="">
           </div>
-		  -->
+		  
 		  
         </div>
       </li>
