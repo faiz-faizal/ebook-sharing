@@ -150,6 +150,11 @@
                 <i class="fa fa-fw fa-list-alt"></i> <span>Manage Feedback</span>
               </a>
             </li>
+			<li class="active">
+              <a href="./manageusers.php">
+                <i class="fa fa-fw fa-list-alt"></i> <span>Manage Users</span>
+              </a>
+            </li>
        <li><br><br><hr>
         
 		<div class="user-panel-logo">

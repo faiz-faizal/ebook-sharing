@@ -8,7 +8,7 @@ $dbname = "ebooksharing";
 //create connection
 $conn= mysqli_connect($servername,$username,$password,$dbname);
 
-$query = "SELECT* FROM FEEDBACK";
+$query = "SELECT* FROM USERS";
 $result = mysqli_query($conn, $query);
 
 if ($result) //true
@@ -24,13 +24,14 @@ if ($result) //true
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <div class="container">
-<h4>Feedback From The Users</h4>
+<h4>Manage Users</h4>
 <table class="table table-striped">
 <thead>
 	<tr>
+		<th>MATRIC ID</th>
 		<th>NAME</th>
+		<th>USERNAME</th>
 		<th>EMAIL</th>
-		<th>MESSAGE</th>
 		<th>ACTION</th>
 	</tr>
 </thead>
@@ -38,17 +39,19 @@ if ($result) //true
 <?php 
 	while($row = mysqli_fetch_array($result))
 	{
-		$nme = $row['FED_NAME'];
-		$emil = $row['FED_EMAIL'];
-		$mssg = $row['FED_MSG'];
+		$id = $row['USER_ID'];
+		$nme = $row['USER_FNAME'];
+		$usrn = $row['USER_USERN'];
+		$email = $row['USER_EMAIL'];
 
 		?>
 		<tbody>
 			<tr>
+				<td><?php echo $id ?></td>
 				<td><?php echo $nme ?></td>
-				<td><?php echo $emil ?></td>
-				<td><?php echo $mssg ?></td>
-				<td><a class="btn btn-warning" href="delete.php?X=<?php echo $emil ?>">Delete</a></td>
+				<td><?php echo $usrn ?></td>
+				<td><?php echo $email ?></td>
+				<td><a class="btn btn-warning" href="deleteUsers.php?X=<?php echo $id ?>">Delete</a></td>
 				
 			</tr>
 		</tbody>
@@ -57,5 +60,7 @@ if ($result) //true
 
 
 </table>
+</div>
+
 
 <?php include './template/footer.php'; ?>

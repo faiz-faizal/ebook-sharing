@@ -92,7 +92,7 @@
                       <label class="col-sm-3 control-label">Upload E-book (.pdf):</label>
 						<div class="col-sm-8">
 							<input type="file" name="bookUpload" id="bookUpload" class="form-control">
-							<p>Note: Maximum size is <b>8MB</b></p>
+							<p>Note: Maximum size is <b>2MB</b></p>
 							<div id="err8"></div>
 						</div>
 					</div>

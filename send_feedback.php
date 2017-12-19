@@ -25,7 +25,7 @@
 
     if(mysqli_query($conn, $sql))
     {
-        echo "New record created successfully";
+        echo "feedback already send, Thank You for your attention..";
 
     }
     else
