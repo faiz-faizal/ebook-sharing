@@ -25,7 +25,8 @@
 
     if(mysqli_query($conn, $sql))
     {
-        echo "feedback already send, Thank You for your attention..";
+		echo "<script>window.alert('Done')</script>";
+        echo "<script>location.href='contact.php'</script>";
 
     }
     else

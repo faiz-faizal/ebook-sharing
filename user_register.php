@@ -1,41 +1,36 @@
-<?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "ebooksharing";
-
-    //create connection
-    $conn= mysqli_connect($servername,$username,$password,$dbname);
-    
-    if(isset($_POST['submit']))
-    {
-        
-    //Assign variable
-    $i = $_POST['user_matricid'];
-    $u = $_POST['user_username'];
-    $f = $_POST['user_fullname'];
-    $e = $_POST['user_email'];
-    $p = $_POST['user_pwd'];
-    
-
-    if(!$conn)
-    {
-        die("connnection failed: ".mysqli_connect_error());
-    }
-
-    $sql = "INSERT INTO users (USER_ID,USER_USERN,USER_FNAME,USER_EMAIL,USER_PASS) VALUES('$i','$u','$f','$e','$p')";
-    }
-
-    if(mysqli_query($conn, $sql))
-    {
-        echo "New record created successfully";
-
-    }
-    else
-    {
-        echo "Error: ".$sql."<br>".mysqli_error($conn);
-    }
-
-    mysqli_close($conn);
-        
-?>
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<table>
+			<tr>
+				<th> rowspan="2">Fruit's Name</th>
+				<th> clmspan="3">Farm Produce</th>
+			</tr>
+			<tr>
+				<th>Johor</th>
+				<th>Melaka</th>
+				<th>Pahang</th>
+			</tr>
+			<tr>
+				<td>Papaya</td>
+				<td>1200kg</td>
+				<td>1300kg</td>
+				<td>1500kg</td>
+			</tr>
+			<tr>
+				<td>Durian</td>
+				<td>1500kg</td>
+				<td>2300kg</td>
+				<td>3500kg</td>
+			</tr>
+			<tr>
+				<td>Rambutan</td>
+				<td>1100kg</td>
+				<td>1400kg</td>
+				<td>2500kg</td>
+	</body>
+	
+</html>
+	
